@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  </head>
+  <body>
+
+	   <form id="formulario-login" style="display: none;">
+			  <label for="nombre-usuario">Nombre del Administrador:</label>
+			  <input type="text" id="nombre-admin" name="nombre-usuario">
+			  <br>
+			  <label for="contrasena">Contraseña del administrador:</label>
+			  <input type="password" id="contrasena-admin" name="contrasena">
+			  <br>
+			  <button type="submit">Iniciar sesión</button>
+		</form>
+
+    <div class="habitaciones-contenedor">
+          <h1>Control de Trabajos de Titulacion</h1>
+          <div class="habitaciones-cuadricula">
+            <section class="room individual">
+              <h2>Asignar Trabajos</h2>
+              <p>Escoger Trabajos de titulacion disponibles</p>
+               <a href="asignar.html"> <button type="submit" >Asignar</button> </a>
+            </section>
+            <section class="room doble">
+              <h2>Gestionar Trabajos</h2>
+              <p>Observat Trabajos que ya hayan sido asignados</p>
+               <a href="Registro_Datos.html"><button type="submit" >Registro</button> </a>
+          </div>
+          
+      </div>
+
+    <footer class="footer">
+      <strong>MANTA - MANABÍ - ECUADOR</strong>  &copy; Copyright 2023
+    </footer>
+
+    <script src="javascript.js"></script>
+
+    <script>
+      const usuario = {
+        nombreUsuario: 'Administrador',
+        contraseña: '12345'
+      };
+
+      const loginadmin = document.getElementById('formulario-login');
+      loginadmin.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nombreUsuario = document.getElementById('nombre-admin').value;
+        const contraseña = document.getElementById('contrasena-admin').value;
+
+        if (nombreUsuario === usuario.nombreUsuario && contraseña === usuario.contraseña) {
+        window.location.href = 'administrador.html';
+        } else {
+        alert('El nombre de usuario o la contraseña son incorrectos.');
+        }
+      });
+    </script>
+
+  </body>
+</html>

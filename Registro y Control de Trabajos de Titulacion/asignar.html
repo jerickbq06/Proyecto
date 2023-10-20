@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion | Reservas</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+  </head>
+  <body>
+
+           
+    <div class="reservas-contenedor">
+      <h1>Asigna Trabajos</h1>
+      <form>
+
+        <div class="formulario-reservar">
+          <label for="fecha-entrada">Fecha de ingreso:</label>
+          <input type="date" id="fecha-entrada" name="fecha-entrada" required>
+        </div>
+        <div class="formulario-reservar">
+          <label for="fecha-salida">Fecha de egreso:</label>
+          <input type="date" id="fecha-salida" name="fecha-salida" required>
+        </div>
+        <div class="formulario-reservar">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="formulario-reservar">
+          <label for="nombre">Nombre del Proyecto:</label>
+          <input type="text" id="proyecto" name="proyecto" required>
+        </div>
+        <div class="formulario-reservar">
+          <label for="nombre">Carrera</label>
+          <input type="text" id="carrera" name="carrera" required>
+        </div>
+        <div class="formulario-reservar">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+        <div class="formulario-reservar">
+		  <label for="telefono">Teléfono:</label>
+		  <input type="tel" id="telefono" name="telefono" required pattern="[0-9]+">
+		</div>
+          <input type="submit" value="Asignar" class="enviarbtn">
+      </form>
+    </div>
+
+
+    <footer class="footer">
+      <strong>Universidad Laica Eloy Alfaro de Manabi</strong>
+    </footer>
+
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
+
